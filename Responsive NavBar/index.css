@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.navbar{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background-color: #118a7e;
+}
+
+.left .logo{
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+}
+
+.right .list{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.right .list a, .left .logo a{
+    text-decoration: none;
+    color: white;
+}
+
+.right .list a:hover{
+    transition: .5s;
+    color: #93e4c1;
+}
+
+#check{
+    display: none;
+}
+
+.checkBtn{
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    .checkBtn{
+        color: white;
+        display: block;
+    }
+    .navbar{
+        position: fixed;
+    }
+    .right .list{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top:3rem;
+        left:100vw;
+        background-color: #118a7e;
+        transition: .8s;
+    }
+    #check:checked~.list{
+        left:0;
+    }
+}
